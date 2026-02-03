@@ -1,0 +1,257 @@
+body{
+    margin: 0px;
+    padding: 30px;
+}
+
+#bg{
+    margin: 0px;
+    padding: 0px;
+
+    background-image: url(game.webp);
+    height: calc(100vh - 60px);
+
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: scrollbg 10s linear infinite;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 10px 10px 40px black;
+    border-radius: 20px;
+}
+
+@keyframes scrollbg {
+    from {
+    background-position: 0 0;
+    }
+    to {
+    background-position: -2000px 0;
+    }
+}
+
+#mcard{
+    width: 390px;
+    height: 290px;
+    background-color:#99624D;
+    box-shadow: 0px 0px 30px #6F3F2E;
+
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    border-radius: 20px;
+}
+
+#button1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.b1{
+    font-family: monospace;
+    width: 150px;
+    height: 60px;
+    font-size: 1.3rem;
+    margin: 20px 5px;
+
+    border-radius: 20px;
+
+    background-color:hsl(15, 82%, 13%);
+    color: white;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.b1:hover{
+    background-color: hsl(15, 82%, 23%);
+    transform: translateY(-6px) scale(1.1);
+}
+
+.b1:active{
+    background-color: hsl(15, 82%, 25%)
+}
+
+.b2{
+    font-family: monospace;
+    margin: 0px 30px;
+    width: 330px;
+    height: 50px;
+
+    font-size: 1.5rem;
+    border-radius: 20px;
+
+    background-color: hsl(15, 82%, 13%);
+    color: white;
+    cursor: pointer;
+}
+
+.b2:hover{
+    background-color: hsl(15, 82%, 23%);
+}
+
+.b2:active{
+    background-color: hsl(15, 82%, 25%)
+}
+
+#foot{
+    position: absolute;
+    bottom: 40px;
+}
+
+.foot1{
+    font-size: 4rem;
+    margin: 20px;
+    color: rgb(255, 255, 225);
+}
+
+.foot1 i{
+    transition: transform 0.2s ease;
+}
+
+.foot1 i:hover{
+    transform: translateY(-6px) scale(1.1);
+}
+
+.box{
+    background-color: hsl(0, 1%, 83%);
+    width: 920px;
+    height: 560px;
+
+    border: 2px solid black;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px  hsl(18, 83%, 2%);
+    padding: 40px;
+
+    font-size: 24px;
+
+    position: fixed;
+    transform: scale(0);
+
+}
+
+.box.show{
+    transform: scale(1);
+
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.box h1{
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#close{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    transition: tranform 0.2s ease-in;
+}
+
+#close:active{
+    transform: translateY(2px) scale(1.1);
+}
+
+.box p{
+    font-size: 2rem;
+    color: rgb(76, 41, 91);
+    line-height: 2;
+}
+
+.box span{
+    color: rgb(78, 107, 204);
+}
+
+#close1{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    transition: tranform 0.2s ease-in;
+}
+
+#close1:active{
+    transform: translateY(2px) scale(1.1);
+}
+
+#close2{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    transition: tranform 0.2s ease-in;
+}
+
+#close2:active{
+    transform: translateY(2px) scale(1.1);
+}
+
+#close3{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    transition: tranform 0.2s ease-in;
+}
+
+#close3:active{
+    transform: translateY(2px) scale(1.1);
+}
+
+@media (max-width:600px){
+    body{
+        padding: 10px;
+    }
+
+    #bg{
+        height: calc(100vh - 20px);
+    }
+
+    #mcard{
+        width: 250px;
+        height: 480px;
+    }
+
+    .b2{
+        width: 200px;
+    }
+
+    .box{
+        width: 280px;
+        height: 520px;
+    }
+
+    .box h1{
+        font-size: 30px;
+    }
+
+    .box p{
+        font-size: 20px;
+    }
+}
